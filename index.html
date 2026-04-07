@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Game Collection - moekyawaung-microsoft</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="game-app">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-gamepad"></i> Game Collection</h1>
+            <p>5 Mini Games | Leaderboard | moekyawaung-microsoft</p>
+        </header>
+
+        <!-- Games Menu -->
+        <main class="games-menu">
+            <div class="games-grid">
+                <div class="game-card" onclick="startGame('tic-tac-toe')">
+                    <div class="game-icon">❌⭕</div>
+                    <h3>Tic Tac Toe</h3>
+                    <p>AI Opponent</p>
+                    <div class="play-btn">Play</div>
+                </div>
+
+                <div class="game-card" onclick="startGame('snake')">
+                    <div class="game-icon">🐍</div>
+                    <h3>Snake Game</h3>
+                    <p>Classic Snake</p>
+                    <div class="play-btn">Play</div>
+                </div>
+
+                <div class="game-card" onclick="startGame('memory')">
+                    <div class="game-icon">🧠</div>
+                    <h3>Memory Cards</h3>
+                    <p>Match Cards</p>
+                    <div class="play-btn">Play</div>
+                </div>
+
+                <div class="game-card" onclick="startGame('typing')">
+                    <div class="game-icon">⌨️</div>
+                    <h3>Typing Speed</h3>
+                    <p>Test Speed</p>
+                    <div class="play-btn">Play</div>
+                </div>
+
+                <div class="game-card" onclick="showLeaderboard()">
+                    <div class="game-icon">🏆</div>
+                    <h3>Leaderboard</h3>
+                    <p>High Scores</p>
+                    <div class="play-btn">View</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Game Modal -->
+        <div id="gameModal" class="game-modal">
+            <div class="game-container" id="gameContainer">
+                <!-- Game will render here -->
+            </div>
+            <button class="close-game" onclick="closeGame()">← Back to Menu</button>
+        </div>
+
+        <!-- Leaderboard Modal -->
+        <div id="leaderboardModal" class="modal">
+            <div class="modal-content">
+                <h2>🏆 Leaderboard</h2>
+                <div id="leaderboard-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
